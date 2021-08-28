@@ -112,7 +112,7 @@ function selecionarEvento (eventos) {// cria uma funcao para o metodo "seleciona
 
     if (eventoSelecionado >= 0 && eventoSelecionado < eventos.length) {//se "eventosSelecionado" (>= 0 &&) for maior e igual a zero e tambem "eventosSelecionado" (<) for menor que o tamanho de "eventos" execute :      
         const evento = eventos[eventoSelecionado];//cria a variavel "evento" que recebe os valores de "eventoSelecionado" dentro de "eventos"
-        if (evento.inscritos.length >= 2) {//se a quantidade de inscritos dentro do evento selecionado for maior ou igual que 100 execute:
+        if (evento.inscritos.length >= 100) {//se a quantidade de inscritos dentro do evento selecionado for maior ou igual que 100 execute:
             console.log("Lista de inscritos para este evento esta lotada");//escreva:
             return;//retorna
         }//else (se nao) execute:
