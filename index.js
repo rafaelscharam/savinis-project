@@ -4,7 +4,7 @@ const prompt = require('prompt-sync')();//cria uma variavel "prompt" e importa o
 
 //Inicio
 function rodaAplicacao() {// cria uma funcao para o metodo "rodaAplicacao"
-    const eventos = [];//cria a variavel "eventos" que recebe um array vazio
+  const eventos = carregarEventosPreviamenteCadastrados();//cria a variavel "eventos" que recebe a funçao "carregarEventosPreviamenteCadastrados"
     let opcao; //cria a variavel "opcao"
 
     while (true) {//enquanto (verdadeiro) loop infinito 
@@ -163,6 +163,40 @@ function inscreverNoEvento() {// cria uma funcao para o metodo "inscreverNoEvent
         };
     }
 
+}
+
+function carregarEventosPreviamenteCadastrados() {//Banco de dados para exemplo
+    return [
+    {
+        nome: 'Logica de programação', 
+        data: new Date ('2022-03-12T21:00:00'),//yyyy-MM-dd'T'HH:mm:ssZ
+        palestrantes: 'Marcio',
+        inscritos: [
+        {
+            nome:'Rafael',
+            email:'rafaelscharam@gmail.com',
+            idade: '22'
+        },
+        {
+            nome:'Felipe',
+            email:'felipedemoraes@gmail.com',
+            idade: '28'
+        },
+        ]
+    },
+    {
+        nome: 'JS',  
+        data: new Date ('2022-02-28T18:00:00'),//yyyy-MM-dd'T'HH:mm:ssZ
+        palestrantes: 'Thiago',
+        inscritos: []
+    },
+    {
+        nome: 'C#', 
+        data: new Date ('2023-06-20T19:00:00'),//yyyy-MM-dd'T'HH:mm:ssZ
+        palestrantes: 'Odirlei',
+        inscritos: []
+    },
+    ];
 }
 //inicio da execução do programa.
 rodaAplicacao();// cria o metodo "rodaAplicacao"
